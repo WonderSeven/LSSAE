@@ -25,6 +25,7 @@ Domain generalization aims to improve the generalization capability of machine l
 - [Caltran](https://drive.google.com/file/d/1x-23eDB1ksE2qKDbpA8vwmBRsWD6jiJw/view?usp=sharing)
 - [PowerSupply](https://drive.google.com/file/d/11AXm-kcSWk2LBhaNEMm56UVm7Evhj793/view?usp=sharing)
 
+Note that if you use these datasets, please cite the corresponding papers.
 
 ---
 
