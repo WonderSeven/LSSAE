@@ -6,7 +6,7 @@ This reposity contains the official implementation for the paper:
 
 [Generalizing to Evolving Domains with Latent Structure-Aware Sequential Autoencoder](*)
 
-Tiexin Qin, Haoliang Li and Shiqi Wang.
+Tiexin Qin, Shiqi Wang and Haoliang Li.
 
 
 <!-- <center>
