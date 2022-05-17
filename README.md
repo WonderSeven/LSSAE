@@ -33,7 +33,7 @@ If you use this code in your research, please cite our paper:
 
     @inproceedings{Qin2022LSSAE,
     title={Generalizing to Evolving Domains with Latent Structure-Aware Sequential Autoencoder},
-    author={Tiexin Qin, Shiqi Wang, and  Haoliang Li},
+    author={Tiexin Qin, Shiqi Wang and  Haoliang Li},
     booktitle={ICML},
     year={2022}
 
