@@ -4,7 +4,7 @@ Generalizing to Evolving Domains with Latent Structure-Aware Sequential Autoenco
 ### Introduction
 This reposity contains the official implementation for the paper:
 
-[Generalizing to Evolving Domains with Latent Structure-Aware Sequential Autoencoder](*)
+[Generalizing to Evolving Domains with Latent Structure-Aware Sequential Autoencoder](https://arxiv.org/abs/2205.07649)
 
 Tiexin Qin, Shiqi Wang and Haoliang Li.
 
@@ -26,6 +26,16 @@ Domain generalization aims to improve the generalization capability of machine l
 - [PowerSupply](https://drive.google.com/file/d/11AXm-kcSWk2LBhaNEMm56UVm7Evhj793/view?usp=sharing)
 
 Note that if you use these datasets, please cite the corresponding papers just like our paper.
+
+
+### Citation    
+If you use this code in your research, please cite our paper:
+
+    @inproceedings{Qin2022LSSAE,
+    title={Generalizing to Evolving Domains with Latent Structure-Aware Sequential Autoencoder},
+    author={Tiexin Qin, Shiqi Wang, and  Haoliang Li},
+    booktitle={ICML},
+    year={2022}
 
 ---
 
