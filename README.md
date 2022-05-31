@@ -19,7 +19,7 @@ Domain generalization aims to improve the generalization capability of machine l
 
 ### Datasets
 - [Circle](https://drive.google.com/file/d/1kWyunwxMXGJI5lARqTuJUFP8_gZ3nFA-/view?usp=sharing)/[Circle-C](https://drive.google.com/file/d/1LM2aWS-d4d47syWROkM57oI2AGZ-hnD2/view?usp=sharing)
-- [Sine]([https://drive.google.com/file/d/1E0Z4wxPjQKvWESlZdmt70A6B9SBOXSsw/view?usp=sharing](https://drive.google.com/file/d/1E0Z4wxPjQKvWESlZdmt70A6B9SBOXSsw/view?usp=sharing))/[Sine-C](https://drive.google.com/file/d/1l15E_RX9zlvicSYur_Bwdqm7t-LbcKri/view?usp=sharing)
+- [Sine](https://drive.google.com/file/d/1E0Z4wxPjQKvWESlZdmt70A6B9SBOXSsw/view?usp=sharing)/[Sine-C](https://drive.google.com/file/d/1l15E_RX9zlvicSYur_Bwdqm7t-LbcKri/view?usp=sharing)
 - [RMNIST](http://yann.lecun.com/exdb/mnist/)
 - [Portraits](https://drive.google.com/file/d/1nvKn2pwaU6vr7Zmo6DTSts2i5Ik_--DW/view?usp=sharing)
 - [Caltran](https://drive.google.com/file/d/1x-23eDB1ksE2qKDbpA8vwmBRsWD6jiJw/view?usp=sharing)
