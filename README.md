@@ -1,12 +1,26 @@
-Generalizing to Evolving Domains with Latent Structure-Aware Sequential Autoencoder
+<h2 align="center">
+<p> Generalizing to Evolving Domains with Latent Structure-Aware Sequential Autoencoder</p>
+</h2>
+
+<div align="center">
+
+[![](https://img.shields.io/github/stars/WonderSeven/LSSAE)](https://github.com/WonderSeven/LSSAE)
+[![](https://img.shields.io/github/forks/WonderSeven/LSSAE)](https://github.com/WonderSeven/LSSAE)
+[![](https://img.shields.io/github/license/WonderSeven/LSSAE)](https://github.com/WonderSeven/LSSAE/blob/main/LICENSE)
+
+</div>
+
 ---
 
-### Introduction
-This reposity contains the official implementation for the paper:
+<p align="center">
+    <img width=400 src="./figs/DAG.png">
+    <!-- <br>Fig 1. The overview of network architecture for LSSAE.</br> -->
+</p>
 
-[Generalizing to Evolving Domains with Latent Structure-Aware Sequential Autoencoder](https://arxiv.org/abs/2205.07649)
+This repo contains official PyTorch implementation of:
 
-Tiexin Qin, Shiqi Wang and Haoliang Li.
+- [Generalizing to Evolving Domains with Latent Structure-Aware Sequential Autoencoder](https://arxiv.org/abs/2205.07649) (ICML 2022)
+ Tiexin Qin, Shiqi Wang and Haoliang Li.
 
 
 <!-- <center>
@@ -14,43 +28,74 @@ Tiexin Qin, Shiqi Wang and Haoliang Li.
 </center> -->
 
 
-### Abstract
-Domain generalization aims to improve the generalization capability of machine learning systems to out-of-distribution (OOD) data. Existing domain generalization techniques embark upon stationary and discrete environments to tackle the generalization issue caused by OOD data. However, many real-world tasks in non-stationary environments (e.g. self-driven car system, sensor measures) involve more complex and continuously evolving domain drift, which raises new challenges for the problem of domain generalization. In this paper, we formulate the aforementioned setting as the problem of evolving domain generalization. Specifically, we propose to introduce a probabilistic framework called Latent Structure-aware Sequential Autoencoder (LSSAE) to tackle the problem of evolving domain generalization via exploring the underlying continuous structure in the latent space of deep neural networks, where we aim to identify two major factors namely covariate shift and concept shift accounting for distribution shift in non-stationary environments. Experimental results on both synthetic and real-world datasets show that LSSAE can lead to superior performances based on the evolving domain generalization setting.
+
+
+### LSSAE
 
 <p align="center">
-    <img width=500 src="./figs/framework_final.png">
-    <br>Fig 1. The overview of network architecture for LSSAE.</br>
+    <img width=500 src="./figs/framework_LSSAE.png">
+    <!-- <br>Fig 1. .</br> -->
 </p>
 
-### Datasets
-- [Circle](https://drive.google.com/file/d/1kWyunwxMXGJI5lARqTuJUFP8_gZ3nFA-/view?usp=sharing)/[Circle-C](https://drive.google.com/file/d/1LM2aWS-d4d47syWROkM57oI2AGZ-hnD2/view?usp=sharing)
-- [Sine](https://drive.google.com/file/d/1E0Z4wxPjQKvWESlZdmt70A6B9SBOXSsw/view?usp=sharing)/[Sine-C](https://drive.google.com/file/d/1l15E_RX9zlvicSYur_Bwdqm7t-LbcKri/view?usp=sharing)
-- [RMNIST](http://yann.lecun.com/exdb/mnist/)
-- [Portraits](https://drive.google.com/file/d/1nvKn2pwaU6vr7Zmo6DTSts2i5Ik_--DW/view?usp=sharing)
-- [Caltran](https://drive.google.com/file/d/1x-23eDB1ksE2qKDbpA8vwmBRsWD6jiJw/view?usp=sharing)
-- [PowerSupply](https://drive.google.com/file/d/11AXm-kcSWk2LBhaNEMm56UVm7Evhj793/view?usp=sharing)
+> The overview of network architecture for LSSAE.
 
-Note that if you use these datasets, please cite the corresponding papers just like our paper.
+
+### Datasets
+- [Circle](https://drive.google.com/file/d/1kWyunwxMXGJI5lARqTuJUFP8_gZ3nFA-/view?usp=sharing)/[Circle-C](https://drive.google.com/file/d/1LM2aWS-d4d47syWROkM57oI2AGZ-hnD2/view?usp=sharing)  [![DOI](https://zenodo.org/badge/DOI/10.1007/978-3-319-46227-1_7.svg)](https://doi.org/10.1007/978-3-319-46227-1_7)
+- [Sine](https://drive.google.com/file/d/1E0Z4wxPjQKvWESlZdmt70A6B9SBOXSsw/view?usp=sharing)/[Sine-C](https://drive.google.com/file/d/1l15E_RX9zlvicSYur_Bwdqm7t-LbcKri/view?usp=sharing) [![DOI](https://zenodo.org/badge/DOI/10.1007/978-3-319-46227-1_7.svg)](https://doi.org/10.1007/978-3-319-46227-1_7)
+- [RMNIST](http://yann.lecun.com/exdb/mnist/) [![DOI](https://zenodo.org/badge/DOI/10.1109/ICCV.2015.293.svg)](https://doi.org/10.1109/ICCV.2015.293)
+- [Portraits](https://drive.google.com/file/d/1nvKn2pwaU6vr7Zmo6DTSts2i5Ik_--DW/view?usp=sharing) [![DOI](https://zenodo.org/badge/DOI/10.1109/TCI.2017.2699865.svg)](https://doi.org/10.1109/TCI.2017.2699865)
+- [Caltran](https://drive.google.com/file/d/1x-23eDB1ksE2qKDbpA8vwmBRsWD6jiJw/view?usp=sharing) [![DOI](https://zenodo.org/badge/DOI/10.1109/CVPR.2014.116.svg)](https://doi.org/10.1109/CVPR.2014.116)
+- [PowerSupply](https://drive.google.com/file/d/11AXm-kcSWk2LBhaNEMm56UVm7Evhj793/view?usp=sharing) [![DOI](https://zenodo.org/badge/DOI/10.1109/JAS.2019.1911747.svg)](https://doi.org/10.1109/JAS.2019.1911747)
+
+
 
 ### Requirements
 
 - python 3.8
 - Pytorch 1.11 or above
 - Pyyaml
+- tqdm
+
+### Quick Start
+
+#### 1. Toy Circle/-C
+```
+cd ./LSSAE
+chmod +x ./scripts/*
+./scripts/train_circle.sh or ./scripts/train_circle_c.sh
+```
+
+
+#### 2. Other Datasets
+
+We can copy the script of train_circle.sh directly, then change the file path for '--data_path', such as 
+
+```
+# RMNIST
+cp ./scripts/train_circle.sh  ./scripts/train_rmnist.sh
+--data_path "/data/DataSets" # the root of rmnist
+```
+
+For different datasets, the feature_extractor (model_func in our implementation), classifier (cla_func in our implementation) and hyper-parameters need to be specified. We provide the detailed description of network architectures and most of the hyper-parameters in our [Appendix](https://arxiv.org/abs/2205.07649). 
+
 
 
 ### Citation    
-If you use this code in your research, please cite our paper:
+If you find this repo useful for your research, please cite the following paper:
 
     @inproceedings{Qin2022LSSAE,
     title={Generalizing to Evolving Domains with Latent Structure-Aware Sequential Autoencoder},
-    author={Tiexin Qin, Shiqi Wang and  Haoliang Li},
+    author={Tiexin Qin and Shiqi Wang and Haoliang Li},
     booktitle={ICML},
     year={2022}
 
 ---
 
-### TODO
-Currently, I am still organizing my code, I will update this reponsitory once I finish my organization.
+### Acknowledgments
+
+Our codes are influenced by the following repos: [DomainBed](https://github.com/facebookresearch/DomainBed) and [Disentangled Sequential Autoencoder](https://github.com/yatindandi/Disentangled-Sequential-Autoencoder).
+
+
 
 
