@@ -21,7 +21,7 @@ def process_each_file(file_path):
 
 
 if __name__ == '__main__':
-    file_root = './logs/ToyCircle/f_30/'
+    file_root = './logs/ToyCircle/'
 
     files = os.listdir(file_root)
     files.sort()
