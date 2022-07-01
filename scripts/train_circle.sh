@@ -7,7 +7,7 @@ do
   echo "Running exp with $seed"
   python main.py --gpu_ids 3 \
         --data_name ToyCircle \
-        --data_path '/data/qtx/DataSets/Toy_Circle/half-circle.pkl' \
+        --data_path '/data/DataSets/Toy_Circle/half-circle.pkl' \
         --num_classes 2 \
         --data_size '[1, 2]' \
         --source-domains 15 \
@@ -25,7 +25,7 @@ do
         --zc-dim 20 \
         --zw-dim 20 \
         --seed $seed \
-        --save_path './logs/ToyCircle/f_30' \
+        --save_path './logs/ToyCircle' \
         --record
   echo "=================="
 done
