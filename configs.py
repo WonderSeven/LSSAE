@@ -1,6 +1,5 @@
-data_path = '/data/qtx/DataSets'
+data_path = '/data/DataSets'
 
-mnist_path = '/data/qtx/DataSets'
-powersupply_path = '/data/qtx/DataSets/PowerSupply/powersupply.arff'
+mnist_path = '/data/DataSets'
 
 save_dir = './logs/test'
