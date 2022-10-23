@@ -39,12 +39,12 @@ This repo contains official PyTorch implementation of:
 
 > The overview of network architecture for LSSAE.
 
-<br>
+<!-- <br> -->
 
-### News:
-1. [2022-6-30] WEIFZH reports an [issue](https://github.com/WonderSeven/LSSAE/issues/2) for reproduction, so I add a table for recording test results under different envs
+<!-- ### News:
+1. [2022-6-30] WEIFZH reports an [issue](https://github.com/WonderSeven/LSSAE/issues/2) for reproduction, so I add a table for recording test results under different envs -->
 
-<br>
+<!-- <br> -->
 
 ### Datasets
 - [Circle](https://drive.google.com/file/d/1kWyunwxMXGJI5lARqTuJUFP8_gZ3nFA-/view?usp=sharing)/[Circle-C](https://drive.google.com/file/d/1LM2aWS-d4d47syWROkM57oI2AGZ-hnD2/view?usp=sharing)  [![DOI](https://zenodo.org/badge/DOI/10.1007/978-3-319-46227-1_7.svg)](https://doi.org/10.1007/978-3-319-46227-1_7)
@@ -60,7 +60,7 @@ We provide the Google Drive links here, so you can download these datasets direc
 ### Requirements
 
 - python 3.8
-- Pytorch 1.11 or above
+- Pytorch 1.10 or above
 - Pyyaml
 - tqdm
 
@@ -89,12 +89,14 @@ For different datasets, the feature_extractor (model_func in our implementation)
 
 ### Test Environment
 
+
 | Platform | CUDA Driver| CUDA Version | Python Version | Pytorch Version | Saved Ckpt | Status |
 | :------: | :--------: | :----------: | :------------: | :-------------: | :--------: | :----: |
-|  Ubantu  | 470.57.02  |     11.3     |      3.8.3     |      1.11       |[./logs/ToyCircle/0](./logs/ToyCircle/0)| :heavy_check_mark:|
-| Window10 |   512.96   |     11.6     |      3.8.3     |      1.12       | TODO | - |
+|  Ubantu  | 470.57.02  |     11.3     |      3.8.3     |      1.12       |[./logs/Torch12/ToyCircle](./logs/Torch12/ToyCircle)| :heavy_check_mark:|
+|  Ubantu  | 470.57.02  |     11.3     |      3.8.3     |      1.11       |[./logs/Torch11/ToyCircle](./logs/Torch11/ToyCircle)| :heavy_check_mark:|
+|  Ubantu  | 470.57.02  |     11.3     |      3.8.3     |      1.10       |[./logs/Torch10/ToyCircle](./logs/Torch10/ToyCircle)| :heavy_check_mark:|
 
-
+All the required packages are installed via conda.
 
 
 ### Citation    
