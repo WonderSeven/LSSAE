@@ -99,31 +99,6 @@ def write_pickle(data, name):
         pickle.dump(data, f)
 
 
-def mixup(x, y, alpha, use_cuda=True):
-    """
-    :param x:
-    :param y: one-hot
-    :param alpha:
-    :param use_cuda:
-    :return:
-    """
-    if alpha > 0:
-        lam = np.random.beta(alpha, alpha)
-    else:
-        lam = 1
-
-    batch_size = x.size()[0]
-
-    if use_cuda:
-        index = torch.randperm(batch_size).cuda()
-    else:
-        index = torch.randperm(batch_size)
-
-    mixed_x = lam * x + (1 - lam) * x[index, :]
-    y_a, y_b = y, y[index]
-    return mixed_x, y_a, y_b, lam
-
-
 def accuracy(output, target, topk=(1,)):
     """Computes the accuracy(%) over the k top predictions for the specified values of k"""
     with torch.no_grad():
