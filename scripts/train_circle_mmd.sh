@@ -5,7 +5,7 @@ echo '++++++++++++++++++++++++++++++++++++++++++++++++'
 for seed in 0
 do
   echo "Running exp with $seed"
-  python main.py --gpu_ids 3 \
+  python main.py --gpu_ids 0 \
         --data_name ToyCircle \
         --data_path '/hdd2/qtx/Datasets/Toy_Circle/half-circle.pkl' \
         --num_classes 2 \
@@ -25,7 +25,7 @@ do
         --zc-dim 20 \
         --zw-dim 20 \
         --seed $seed \
-        --save_path './logs/ToyCircle/MMD_LSAE_1' \
+        --save_path './logs/ToyCircle/MMD_LSAE' \
         --record
   echo "=================="
 done

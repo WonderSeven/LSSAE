@@ -25,7 +25,7 @@ do
         --zc-dim 20 \
         --zw-dim 20 \
         --seed $seed \
-        --save_path './logs/ToyCircle_C/MMD_LSAE_18' \
+        --save_path './logs/ToyCircle_C/MMD_LSAE' \
         --record
   echo "=================="
 done

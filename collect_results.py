@@ -20,12 +20,9 @@ def process_each_file(file_path):
 
 
 if __name__ == '__main__':
-    # file_root = './logs/Torch10/ToyCircle/'
-
-    # file_root = './logs/ToyCircle_C/LSSAE_5/'
+    file_root = './logs/ToyCircle/MMD_LSAE/'
     # file_root = './logs/ToyCircle_C/MMD_LSAE/'
-
-    file_root = './logs/RMNIST/MMD_LSAE_2/'
+    # file_root = './logs/RMNIST/MMD_LSAE/'
 
     files = os.listdir(file_root)
     files.sort()

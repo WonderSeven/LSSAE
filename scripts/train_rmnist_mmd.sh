@@ -5,7 +5,7 @@ echo '++++++++++++++++++++++++++++++++++++++++++++++++'
 for seed in 0
 do
   echo "Running exp with $seed"
-  python main.py --gpu_ids 1 \
+  python main.py --gpu_ids 0 \
         --data_name RMNIST \
         --data_path '/hdd2/qtx/Datasets'\
         --num_classes 10 \
@@ -25,7 +25,7 @@ do
         --zc-dim 32 \
         --zw-dim 32 \
         --seed $seed \
-        --save_path './logs/RMNIST/MMD_LSAE_8' \
+        --save_path './logs/RMNIST/MMD_LSAE' \
         --record
   echo "=================="
 done

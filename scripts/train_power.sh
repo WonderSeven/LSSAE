@@ -5,7 +5,7 @@ echo '++++++++++++++++++++++++++++++++++++++++++++++++'
 for seed in 0
 do
   echo "Running exp with $seed"
-  python main.py --gpu_ids 1 \
+  python main.py --gpu_ids 0 \
         --data_name PowerSupply \
         --data_path '/hdd2/qtx/Datasets/PowerSupply/powersupply.arff' \
         --num_classes 2 \

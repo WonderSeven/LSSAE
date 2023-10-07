@@ -135,6 +135,12 @@ To apply our method to other datasets, we can first copy the script of train_cir
 For different datasets, the feature_extractor (model_func in our implementation), classifier (cla_func in our implementation) and hyper-parameters need to be specified. We provide the detailed description of network architectures and most of the hyper-parameters in our [Appendix](https://arxiv.org/abs/2205.07649). As this is a reproduced version that implements LSSAE and MMD-LSAE into one unified framework, the results could be a little different.  See [./logs](./logs) for running records. 
 
 
+### ⭐ Notice
+
+The originally released code for LSSAE only can be found in the `ori-lssae` branch.
+
+
+
 ### Citations  
 If you find this repo useful for your research, please cite the following papers:
 

@@ -42,7 +42,7 @@ def _hparams(cfg):
         _hparam('lr', 5e-4, lambda r: 10 ** r.uniform(-4.5, -2.5))
         _hparam('weight_decay', 0., lambda r: 0.)
     elif dataset in Digit_Data:
-        _hparam('lr', 1e-5, lambda r: 10 ** r.uniform(-5, -3.5))
+        _hparam('lr', 5e-5, lambda r: 10 ** r.uniform(-5, -3.5))
         _hparam('weight_decay', 0., lambda r: 10 ** r.uniform(-6, -2))
     else:
         _hparam('lr', 5e-5, lambda r: 10 ** r.uniform(-5, -3.5))

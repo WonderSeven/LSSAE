@@ -271,7 +271,6 @@ class LSSAE(AbstractAutoencoder):
 
         self.aux_loss_multiplier_y = 200
         self.ts_multiplier = 20.
-
         self._build()
         self._init()
 
@@ -355,7 +354,7 @@ class LSSAE(AbstractAutoencoder):
         CE_x = self.calc_recon_loss(recon_x, all_x)
 
         # Distribution loss
-        # kld on zc #-2.0 *
+        # kld on zc
         static_kld = -2.0 * torch.sum(1 + static_qx_latent_variables[:, self.zc_dim:] -
                                       torch.pow(static_qx_latent_variables[:, :self.zc_dim], 2) -
                                       torch.exp(static_qx_latent_variables[:, self.zc_dim:]))
@@ -398,9 +397,9 @@ class LSSAE(AbstractAutoencoder):
         total_loss.backward()
         self.opt.step()
 
-        recon_x_loss = CE_x / batch_size # (batch_size * domains)
+        recon_x_loss = CE_x / batch_size
         static_loss = static_kld / batch_size
-        dynamic_w_kld = dynamic_w_kld / batch_size # (batch_size * domains)
+        dynamic_w_kld = dynamic_w_kld / batch_size
         dynamic_v_kld = dynamic_v_kld / batch_size
 
         print('Total loss:{:.3f}, recon_x_loss:{:.3f}, recon_y_loss:{:.3f}, static_loss:{:.3f}, dynamic_w_loss:{:.3f}, '
@@ -435,8 +434,8 @@ class MMD_LSAE(AbstractAutoencoder):
         self.zc_kernel_type = self.zw_kernel_type = self.zv_kernel_type = 'gaussian'
         self.sigma_list = self.gen_sigma_list()
 
-        self.aux_loss_multiplier_y = 200
-        self.lambda_zc_mmd, self.lambda_zw_mmd, self.lambda_zv_mmd = 1.0, 1.0, 10.0
+        self.aux_loss_multiplier_y = 100
+        self.lambda_zc_mmd, self.lambda_zw_mmd, self.lambda_zv_mmd = 5.0, 1.0, 1.0
         self.noise_mean, self.noise_var = 0., 0.5
         self._build()
         self._init()
@@ -518,8 +517,8 @@ class MMD_LSAE(AbstractAutoencoder):
         all_y = torch.transpose(all_y, 0, 1)  # [batch_size, source_domains]
 
         # ------------------------------ Covariant shift  -------------------------------
-        static_qzc_samples = self.static_encoder(all_x)  # [48, 40]
-        dynamic_qzw_samples = self.dynamic_w_encoder(all_x, None)  # [48, 15, 40]
+        static_qzc_samples = self.static_encoder(all_x)
+        dynamic_qzw_samples = self.dynamic_w_encoder(all_x, None)
 
         static_pzc_samples = self.static_prior.sampling(batch_size*domains).squeeze(1)
         dynamic_pzw_sigma_mu, dynamic_pzw_samples = self.gen_dynamic_prior(domains, self.dynamic_w_prior, self.latent_w_priors, batch_size)
@@ -544,7 +543,7 @@ class MMD_LSAE(AbstractAutoencoder):
         one_hot_y += torch.normal(mean=self.noise_mean, std=self.noise_var, size=one_hot_y.shape).to(one_hot_y.device)
 
         one_hot_y = one_hot_y.view(batch_size, domains, -1)
-        dynamic_qzv_samples = self.dynamic_v_encoder(one_hot_y, None)  # [24, 10, 10]
+        dynamic_qzv_samples = self.dynamic_v_encoder(one_hot_y, None)
         dynamic_pzv_sigma_mu, dynamic_pzv_samples = self.gen_dynamic_prior(domains, self.dynamic_v_prior, self.latent_v_priors, batch_size)
 
         # flatten
@@ -582,4 +581,3 @@ class MMD_LSAE(AbstractAutoencoder):
         y_logit = self.category_cla_func(torch.cat([zc, zv], dim=1))
 
         return y_logit
-
