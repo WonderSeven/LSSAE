@@ -557,8 +557,8 @@ class MMD_LSAE(AbstractAutoencoder):
         # Distribution loss
         dynamic_zv_mmd = self.lambda_zv_mmd * mmd(dynamic_qzv_samples, dynamic_pzv_samples, self.zv_kernel_type)
 
-        # total_loss = (CE_x / domains + static_zc_mmd + dynamic_zw_mmd + dynamic_zv_mmd) / batch_size + CE_y
-        total_loss =  CE_x / domains + (static_zc_mmd + dynamic_zw_mmd + dynamic_zv_mmd) / batch_size + CE_y
+        total_loss = (CE_x / domains + static_zc_mmd + dynamic_zw_mmd + dynamic_zv_mmd) / batch_size + CE_y
+        # total_loss =  CE_x / domains + (static_zc_mmd + dynamic_zw_mmd + dynamic_zv_mmd) / batch_size + CE_y
         self.opt.zero_grad()
         total_loss.backward()
         self.opt.step()
